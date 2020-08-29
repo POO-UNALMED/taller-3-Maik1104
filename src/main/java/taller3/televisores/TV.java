@@ -9,7 +9,7 @@ public class TV {
 	Control control;
 	static int numTV;
 
-	TV(Marca mar, boolean est){
+	public TV(Marca mar, boolean est){
 		marca = mar;
 		estado = est;
 	}
