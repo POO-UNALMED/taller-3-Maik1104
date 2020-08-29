@@ -9,7 +9,7 @@ public class TV {
 	Control control;
 	static int numTV;
 
-	public TV(Marca mar, boolean est){
+	TV(Marca mar, boolean est){
 		marca = mar;
 		estado = est;
 	}
@@ -22,19 +22,27 @@ public class TV {
 	}
 	
 	public void canalUp() {
-		this.canal++;
+		if (this.getEstado() && 1<=this.getCanal() && this.getCanal()<120) {
+			canal++;
+		}
 	}
 	
 	public void canalDown() {
-		this.canal--;
+		if (this.getEstado() && 1<this.getCanal() && this.getCanal()<=120) {
+			canal--;
+		}
 	}
 	
 	public void volumenUp() {
+		if (this.getEstado() && 0<=this.getVolumen() && this.getVolumen()<7) {
 		this.volumen++;
+		}
 	}
 	
 	public void volumenDown() {
-		this.volumen--;
+		if (this.getEstado() && 0<this.getVolumen() && this.getVolumen()<=7) {
+			this.volumen--;
+			}
 	}
 	
 	
@@ -58,7 +66,9 @@ public class TV {
 	}
 
 	public void setCanal(int canal) {
-		this.canal = canal;
+		if (this.getEstado() && 0<canal && canal<=120) {
+			this.canal = canal;
+		}
 	}
 
 	public int getPrecio() {
