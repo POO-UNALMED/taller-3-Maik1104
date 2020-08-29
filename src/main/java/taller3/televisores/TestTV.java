@@ -6,7 +6,9 @@ public class TestTV {
 	    Marca marca2 = new Marca("Lj");
 		
 	    TV tv1 = new TV(marca1, true);
+	    TV.numTV++;
 	    TV tv2 = new TV(marca2, false);
+	    TV.numTV++;
 	    
 	    tv1.setPrecio(2000);
 	    tv2.setCanal(90);
